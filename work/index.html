@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://wzdesignstudio.com/# -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walter Ziegemann — Diseñador UX/UI &amp; Brand Manager | Bahía Blanca</title>
+  <meta name="description" content="Diseñador UX/UI &amp; Brand Manager en Bahía Blanca. Creo experiencias digitales claras y marcas coherentes que generan confianza. Walter Ziegemann — WZ Design Studio.">
+  <meta name="keywords" content="diseñador UX UI Bahía Blanca, brand manager Bahía Blanca, diseño web Bahía Blanca, identidad de marca Bahía Blanca, diseñador digital Argentina">
+  <meta name="author" content="Walter Ziegemann">
+
+  <!-- FAVICON — poné tus archivos en images/ -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2" rel="stylesheet">
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-dark: #0d0f1a;
+      --bg-darker: #080a12;
+      --bg-mid: #111420;
+      --bg-card: #151826;
+      --accent-blue: #4A6EE8;
+      --accent-orange: #E8914A;
+      --text-white: #ffffff;
+      --text-muted: rgba(255, 255, 255, 0.55);
+      --text-faint: rgba(255, 255, 255, 0.2);
+      --card-bg: #ffffff;
+      --card-text: #0d0f1a;
+      --card-muted: #555;
+      --border: rgba(255, 255, 255, 0.07);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-white);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      width: 100%;
+      background-color: rgba(8, 10, 18, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .nav-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #1e2235;
+      border: 1.5px solid rgba(74, 110, 232, 0.4);
+      box-shadow: 0 0 0 3px rgba(74, 110, 232, 0.08);
+    }
+
+    .nav-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 44px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--text-muted);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-white);
+    }
+
+    .nav-cta {
+      background-color: var(--accent-orange);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 11px 22px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .nav-cta:hover {
+      opacity: 0.88;
+      transform: translateY(-1px);
+    }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--text-white);
+      border-radius: 2px;
+    }
+
+    /* HERO */
+    #hero {
+      position: relative;
+      background-color: var(--bg-dark);
+      padding: 140px 80px 120px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      left: -200px;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(74, 110, 232, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    #hero::after {
+      content: '';
+      position: absolute;
+      bottom: -100px;
+      right: 0;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(232, 145, 74, 0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image: linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 80px 80px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(74, 110, 232, 0.1);
+      border: 1px solid rgba(74, 110, 232, 0.25);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      color: rgba(74, 110, 232, 0.9);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+
+    .hero-badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-blue);
+      box-shadow: 0 0 6px var(--accent-blue);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: 0.4
+      }
+    }
+
+    .hero-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: clamp(18px, 2.5vw, 36px);
+      color: var(--text-faint);
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 600;
+      font-size: clamp(40px, 6vw, 74px);
+      color: var(--text-white);
+      line-height: 1.08;
+      margin-bottom: 32px;
+      max-width: 860px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #fff 40%, rgba(74, 110, 232, 0.7));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-family: 'Righteous', cursive;
+      font-weight: 400;
+      font-size: clamp(15px, 1.8vw, 21px);
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 48px;
+      max-width: 560px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: var(--accent-blue);
+      color: #fff;
+      font-family: 'Roboto Mono', monospace;
+      font-weight: 700;
+      font-size: clamp(14px, 1.5vw, 19px);
+      padding: 16px 40px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 0 32px rgba(74, 110, 232, 0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .hero-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 48px rgba(74, 110, 232, 0.45);
+    }
+
+    .hero-cta-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--text-muted);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 32px;
+      text-decoration: none;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .hero-cta-ghost:hover {
+      color: var(--text-white);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* ABOUT */
+    #about {
+      position: relative;
+      background-color: var(--bg-darker);
+      padding: 110px 80px;
+      border-top: 1px solid var(--border);
+    }
+
+    .about-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      gap: 80px;
+      align-items: flex-start;
+    }
+
+    .about-label {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-blue);
+      flex-shrink: 0;
+      padding-top: 6px;
+      min-width: 80px;
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      align-items: flex-start;
+      flex: 1;
+    }
+
+    .about-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      overflow: hidden;
+      background: #1e2235;
+      border: 2px solid rgba(74, 110, 232, 0.3);
+      box-shadow: 0 0 24px rgba(74, 110, 232, 0.1);
+    }
+
+    .about-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-text {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .about-name {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--text-white);
+    }
+
+    .about-role {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-blue);
+      margin-top: -10px;
+    }
+
+    .about-desc {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    .about-quote {
+      font-family: 'Inter', sans-serif;
+      font-style: italic;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.35);
+      line-height: 1.7;
+      border-left: 2px solid var(--accent-blue);
+      padding-left: 18px;
+    }
+
+    /* SERVICES */
+    #services {
+      background-color: var(--bg-mid);
+      padding: 110px 80px;
+      border-top: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #services::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(74, 110, 232, 0.4), transparent);
+    }
+
+    .section-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-blue);
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: clamp(24px, 3vw, 36px);
+      color: var(--text-white);
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 64px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 24px 0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .service-card:hover {
+      border-color: rgba(74, 110, 232, 0.3);
+      transform: translateY(-4px);
+    }
+
+    .service-icon {
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .service-card h3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--text-white);
+      text-align: center;
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+
+    .service-pro {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-blue);
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 13px;
+      color: var(--text-muted);
+      text-align: center;
+      line-height: 1.7;
+      margin-bottom: 32px;
+      flex: 1;
+    }
+
+    .service-card-bar {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent-blue), transparent);
+      margin-top: auto;
+    }
+
+    /* WORK */
+    #work {
+      background-color: var(--bg-dark);
+      padding: 110px 80px;
+      border-top: 1px solid var(--border);
+    }
+
+    .work-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .work-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 340px;
+      transition: border-color 0.3s;
+    }
+
+    .work-card:hover {
+      border-color: rgba(74, 110, 232, 0.25);
+    }
+
+    .work-card.reverse {
+      direction: rtl;
+    }
+
+    .work-card.reverse>* {
+      direction: ltr;
+    }
+
+    .work-card-text {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .work-tag {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-blue);
+      background: rgba(74, 110, 232, 0.1);
+      border: 1px solid rgba(74, 110, 232, 0.2);
+      border-radius: 100px;
+      padding: 4px 12px;
+      margin-bottom: 16px;
+    }
+
+    .work-card-text h3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      color: var(--text-white);
+      margin-bottom: 16px;
+    }
+
+    .work-card-text p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      flex: 1;
+    }
+
+    .work-card-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 36px;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 100px;
+      padding: 10px 24px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--text-muted);
+      cursor: pointer;
+      text-decoration: none;
+      align-self: flex-start;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .work-card-btn:hover {
+      color: var(--text-white);
+      border-color: rgba(255, 255, 255, 0.35);
+    }
+
+    .work-card-image {
+      overflow: hidden;
+      min-height: 300px;
+    }
+
+    .work-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .work-card-image.placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.15);
+    }
+
+    /* FOOTER */
+    #contact {
+      background-color: var(--bg-darker);
+      padding: 110px 80px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #contact::before {
+      content: '';
+      position: absolute;
+      bottom: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 400px;
+      background: radial-gradient(ellipse, rgba(74, 110, 232, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    #contact h2 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: clamp(28px, 4vw, 42px);
+      color: var(--text-white);
+      text-align: center;
+      position: relative;
+    }
+
+    .contact-sub {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      color: var(--text-muted);
+      text-align: center;
+      max-width: 440px;
+      line-height: 1.7;
+      margin-top: -16px;
+      position: relative;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      position: relative;
+    }
+
+    .social-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s, transform 0.2s;
+    }
+
+    .social-icon:hover {
+      background: rgba(74, 110, 232, 0.1);
+      border-color: rgba(74, 110, 232, 0.3);
+      transform: translateY(-3px);
+    }
+
+    .social-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: var(--text-muted);
+      transition: fill 0.2s;
+    }
+
+    .social-icon:hover svg {
+      fill: var(--text-white);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 44px;
+      list-style: none;
+      position: relative;
+    }
+
+    .footer-links a {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--text-white);
+    }
+
+    .footer-divider {
+      width: 100%;
+      max-width: 1100px;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .footer-copy {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.25);
+    }
+
+    .footer-location {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.25);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      nav {
+        padding: 16px 40px;
+      }
+
+      #hero,
+      #about,
+      #services,
+      #work,
+      #contact {
+        padding: 80px 40px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-inner {
+        gap: 48px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 16px 24px;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .nav-links.open {
+        display: flex;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: var(--bg-darker);
+        padding: 28px 24px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-hamburger {
+        display: flex;
+      }
+
+      #hero {
+        padding: 100px 24px 70px;
+        min-height: auto;
+      }
+
+      #about,
+      #services,
+      #work,
+      #contact {
+        padding: 70px 24px;
+      }
+
+      .about-inner {
+        flex-direction: column;
+        gap: 28px;
+      }
+
+      .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .about-quote {
+        text-align: left;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+
+      .work-card {
+        grid-template-columns: 1fr;
+      }
+
+      .work-card.reverse {
+        direction: ltr;
+      }
+
+      .work-card-image {
+        min-height: 220px;
+      }
+
+      .work-card-text {
+        padding: 32px 28px;
+      }
+
+      .work-card-text h3 {
+        font-size: 22px;
+      }
+
+      .footer-links {
+        gap: 24px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav .nav-cta {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-avatar">
+      <img src="images/dddd.png" alt="Walter Ziegemann">
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#work">Work</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Contact</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Bahía Blanca, Argentina
+      </div>
+      <p class="hero-eyebrow">WZ Design Studio</p>
+      <h1 class="hero-title">Soluciones prácticas,<br><span>diseño con claridad.</span></h1>
+      <p class="hero-sub">Diseñador UX/UI &amp; Brand Manager. Creo experiencias digitales claras y marcas coherentes que
+        generan confianza y hacen crecer negocios.</p>
+      <div class="hero-actions">
+        <a href="/#work" class="hero-cta">Ver mi trabajo →</a>
+        <a href="https://wa.me/542915773869?text=Hola,%20me%20gustar%C3%ADa%20consultarte%20por%20un%20proyecto" class="hero-cta-ghost" target="_blank">Hablemos →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about-inner">
+      <span class="about-label">About</span>
+      <div class="about-content">
+        <div class="about-avatar">
+          <img src="images/dddd.png" alt="Walter Ziegemann">
+        </div>
+        <div class="about-text">
+          <p class="about-name">Walter Ziegemann</p>
+          <p class="about-role">Diseñador UX/UI &amp; Brand Manager</p>
+          <p class="about-desc">Trabajo con empresas y emprendedores que necesitan una presencia digital que esté a la
+            altura de su negocio. Diseño interfaces claras, fáciles de usar y sin fricción, y construyo identidades de
+            marca coherentes que generan confianza desde el primer contacto.<br><br>Operando desde Bahía Blanca, trabajo con
+            clientes en toda Argentina y el exterior.</p>
+          <p class="about-quote">La coherencia de marca fortalece tu negocio y su credibilidad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <p class="section-eyebrow">Especialidades</p>
+    <h2 class="section-title">Core Services</h2>
+    <p class="section-subtitle">Diseño centrado en el usuario y comunicación visual estratégica para negocios que
+      quieren crecer.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🔍</div>
+        <p class="service-pro">UX Research</p>
+        <h3>Auditoría UX</h3>
+        <p>Identifico problemas de usabilidad en tu sitio o app y propongo soluciones concretas basadas en el
+          comportamiento real de tus usuarios.</p>
+        <div class="service-card-bar"></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <p class="service-pro">UX/UI Design</p>
+        <h3>Rediseño Web &amp; App</h3>
+        <p>Transformo interfaces desactualizadas o confusas en experiencias claras, intuitivas y centradas en el
+          usuario.</p>
+        <div class="service-card-bar"></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">◎</div>
+        <p class="service-pro">Brand Strategy</p>
+        <h3>Rebranding</h3>
+        <p>Renuevo la identidad visual de tu marca para que refleje quién sos realmente y conecte con tu público
+          objetivo.</p>
+        <div class="service-card-bar"></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">✦</div>
+        <p class="service-pro">Content Design</p>
+        <h3>UX Writing &amp; Microcopy</h3>
+        <p>Redacto textos claros y empáticos que guían al usuario, reducen fricciones y mejoran la conversión.</p>
+        <div class="service-card-bar"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <p class="section-eyebrow">Proyectos</p>
+    <h2 class="section-title">Work</h2>
+    <p class="section-subtitle">Algunos proyectos recientes.</p>
+    <div class="work-list">
+
+      <div class="work-card">
+        <div class="work-card-text">
+          <div>
+            <span class="work-tag">App Mobile · UX/UI Design</span>
+            <h3>Car detailing App</h3>
+            <p>El flujo de reservas era confuso y el negocio perdía clientes antes de que completaran el proceso.
+              Rediseñé la arquitectura del sistema e integré tecnología VIN-Scan para reducir el proceso de reserva a
+              menos de 60 segundos.</p>
+          </div>
+          <a href="work-cardetailing.html" class="work-card-btn">Ver proyecto ▶</a>
+        </div>
+        <div class="work-card-image" style="background: linear-gradient(135deg, #1a2d6e, #4A6EE8);">
+          <img src="images/photo card1.png" alt="Car detailing App">
+        </div>
+      </div>
+
+      <div class="work-card reverse">
+        <div class="work-card-text">
+          <div>
+            <span class="work-tag">Brand Identity · Rebranding</span>
+            <h3>Krav Maga Argentina</h3>
+            <p>La organización necesitaba escalar a nivel nacional pero su identidad visual era inconsistente. Construí
+              un sistema de marca que preserva el ADN original y es lo suficientemente flexible para sostener la
+              expansión.</p>
+          </div>
+          <a href="work.html" class="work-card-btn">Ver proyecto ▶</a>
+        </div>
+        <div class="work-card-image" style="background: linear-gradient(135deg, #0a0a0a, #1a1a1a);">
+          <img src="images/photo card2.png" alt="Krav Maga Argentina">
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-card-text">
+          <div>
+            <span class="work-tag">Brand Identity · Premium</span>
+            <h3>Nautilus Car Care</h3>
+            <p>Un centro automotriz de alta gama que no se veía como tal. Desarrollé una identidad visual premium desde
+              cero para posicionarlos correctamente y atraer al segmento de clientes que buscan.</p>
+          </div>
+          <a href="work-nautilus.html" class="work-card-btn">Ver proyecto ▶</a>
+        </div>
+        <div class="work-card-image" style="background: linear-gradient(135deg, #1a1a2e, #2d2d4e);">
+          <img src="images/photo card3.png" alt="Nautilus Car Care">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h2>Conectemos</h2>
+    <p class="contact-sub">¿Tenés un proyecto en mente? Trabajemos juntos.</p>
+    <div class="social-icons">
+      <a href="mailto:waltervz278@gmail.com" class="social-icon" aria-label="Email">
+        <svg viewBox="0 0 24 24">
+          <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"></path>
+        </svg>
+      </a>
+
+      <a href="https://t.me/542915773869" class="social-icon" aria-label="Telegram" target="_blank">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.19 13.847l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.958.712z"></path>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/walter-ziegemann/" class="social-icon" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+        </svg>
+      </a>
+    </div>
+    <ul class="footer-links">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#work">Work</a></li>
+    </ul>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 WZ Design Studio</span>
+      <span class="footer-location">📍 Bahía Blanca, Argentina</span>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('open')));
+  </script>
+
+
+
+</body></html>
