@@ -41,7 +41,7 @@
     }
 
     /* ── LOGO PLACEHOLDERS ──
-       Reemplazá src="images/logo.png" en tres lugares:
+       Reemplazá src="../images/logo.png" en tres lugares:
        1. .shell-bg     → fondo decorativo del hero (logo grande, muy sutil)
        2. .logo-shell-svg → showcase de la sección Solución (logo prominente)
        3. .mock-logo-img  → miniatura dentro del mock-up
@@ -61,14 +61,18 @@
       aspect-ratio: 1;
       object-fit: contain;
       animation: drift 8s ease-in-out infinite;
-      filter: brightness(10);  /* logo oscuro → blanco sobre fondo oscuro */
+      filter: brightness(2);  /* logo oscuro → blanco sobre fondo oscuro */
+      mix-blend-mode: screen;
+
     }
     .mock-logo-img {
       width: 32px; height: 32px;
       object-fit: contain;
       margin-bottom: 8px;
       opacity: .85;
-      filter: brightness(10);
+      filter: brightness(2);
+      mix-blend-mode: screen;
+
     }
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 200;
@@ -766,7 +770,7 @@
   <!-- ═══ HERO ═══ -->
   <section class="hero">
     <div class="hero-ocean"></div>
-    <img src="images/logo.png" alt="" class="shell-bg" aria-hidden="true">
+    <img src="../images/logo.png" alt="" class="shell-bg" aria-hidden="true">
     <svg class="waves-bg" viewBox="0 0 1440 320" preserveAspectRatio="none">
       <defs>
         <linearGradient id="wg" x1="0" y1="0" x2="0" y2="1">
@@ -794,8 +798,7 @@
         <span class="pill">Brand Identity</span>
         <span class="pill">Desde cero</span>
         <span class="pill">Bahía Blanca</span>
-        <span class="pill">Figma · Adobe Color</span>
-      </div>
+     </div>
     </div>
   </section>
 
@@ -862,7 +865,7 @@
       <span class="pq-mark">"</span>
       <p class="pq-text">
         El nautilus existe desde antes que el hombre.<br>
-        No cambió porque ya encontró su forma perfecta.<br>
+        Sobrevivió a todo porque supo evolucionar sin perder su esencia.<br>
         <em>Eso es lo que esta marca tenía que ser.</em>
       </p>
       <div class="pq-rule"></div>
@@ -881,7 +884,7 @@
 
       <div class="logo-stage reveal">
         <!-- LOGO: reemplazá "logo.png" con tu archivo -->
-        <img src="images/logo.png" alt="Nautilus Car Care Centre logo" class="logo-shell-svg">
+        <img src="../images/logo.png" alt="Nautilus Car Care Centre logo" class="logo-shell-svg">
         <div class="logo-wordmark">
           <div class="lw-primary">Nautilus</div>
           <div class="lw-rule"></div>
@@ -1014,7 +1017,7 @@
           <div class="mock-inner">
             <div class="mock-topline"></div>
             <!-- LOGO MOCK: reemplazá "logo.png" con tu archivo -->
-            <img src="images/logo.png" alt="" class="mock-logo-img" aria-hidden="true">
+            <img src="../images/logo.png" alt="" class="mock-logo-img" aria-hidden="true">
             <div class="mock-name">Nautilus</div>
             <div class="mock-sub2">Car Care Centre</div>
             <div class="mock-hr"></div>
@@ -1109,7 +1112,7 @@
       <h2 style="
         font-family: var(--display); font-weight:400;
         font-size: clamp(34px, 7.5vw, 68px);
-        line-height: .9; color: var(--paper);
+        line-height: 1.2; color: var(--paper);
         letter-spacing: -.01em;
       ">
         ¿Tu negocio necesita<br>
@@ -1130,7 +1133,7 @@
       </p>
 
       <div style="display:flex; flex-direction:column; gap:10px; width:100%; max-width:340px;">
-        <a href="https://wa.me/542915773869?text=Hola%20Walter%2C%20vi%20el%20caso%20Nautilus%20y%20me%20interesa%20desarrollar%20mi%20marca"
+        <a href="https://wa.me/5492915773869?text=Hola%20Walter%2C%20vi%20el%20caso%20Nautilus%20y%20me%20interesa%20desarrollar%20mi%20marca"
            target="_blank" rel="noopener"
            style="
              display:flex; align-items:center; justify-content:center; gap:10px;

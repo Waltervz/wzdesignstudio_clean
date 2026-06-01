@@ -532,7 +532,7 @@
       transform: scale(.88) translateY(14px);
       opacity: .65;
     }
-    .pframe img { width: 100%; display: block; }
+    .pframe img { width: 100%; aspect-ratio: 9/19; object-fit: cover; display: block; }
     .pframe-ph {
       width: 100%; aspect-ratio: 9/19;
       background: var(--graphite);
@@ -773,10 +773,17 @@
     }
 
     /* ── Phones: en móvil solo el frame central ── */
-    @media (max-width: 540px) {
-      .pframe.aside { display: none; }
-      .pframe.center { width: clamp(200px, 72vw, 280px); }
-    }
+   @media (max-width: 540px) {
+  .phones { flex-direction: column; align-items: center; gap: 28px; }
+  .pframe.aside,
+  .pframe.center {
+    display: block;
+    width: clamp(220px, 80vw, 300px);
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
 
     /* ── Wrap padding mínimo en móvil muy chico ── */
     @media (max-width: 380px) {
@@ -1440,24 +1447,17 @@
       </div>
 
       <!-- phone showcase con tu imagen real -->
-      <div class="phones reveal d2">
-        <div class="pframe aside">
-          <div class="pframe-ph">
-            <!-- <img src="screen-booking.png" alt="Booking flow"> -->
-            <span>Booking<br>Flow</span>
-          </div>
-        </div>
-        <div class="pframe center">
-          <img src="images/Home_Screen_UI.png" alt="Car Detailing App — Home Screen"
-               onerror="this.outerHTML='<div class=\'pframe-ph\'><span>Home<br>Screen</span></div>'"/>
-        </div>
-        <div class="pframe aside">
-          <div class="pframe-ph">
-            <!-- <img src="screen-vin.png" alt="VIN Scan"> -->
-            <span>VIN<br>Scan</span>
-          </div>
-        </div>
-      </div>
+      <div class="phones reveal d2 in">
+  <div class="pframe aside">
+    <img src="../images/VINScannerUI.png" alt="Car Detailing App — VIN Scan">
+  </div>
+  <div class="pframe center">
+    <img src="../images/HomeScreenUI.png" alt="Car Detailing App — Home Screen">
+  </div>
+  <div class="pframe aside">
+    <img src="../images/PreloadCardUI.png" alt="Car Detailing App — Booking Flow">
+  </div>
+</div>
 
       <div class="feats reveal d3">
         <div class="feat">
@@ -1548,7 +1548,7 @@
       </p>
 
       <!-- Hablemos — solo, centrado, más prominente -->
-      <a href="https://wa.me/542915773869?text=Hola%20Walter%2C%20vi%20el%20caso%20Car%20Detailing%20y%20me%20interesa%20hablar%20de%20mi%20proyecto"
+      <a href="https://wa.me/5492915773869?text=Hola%20Walter%2C%20vi%20el%20caso%20Car%20Detailing%20y%20me%20interesa%20hablar%20de%20mi%20proyecto"
          class="btn-main btn-main--lg" target="_blank" rel="noopener">
         Hablemos
       </a>
